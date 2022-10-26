@@ -14,7 +14,7 @@ namespace BancoSolidario.ExtendApplication.Contracts.Persistence
 
         Task<ResponseChangeActivators> ChangeEditable(T entity, bool? command);
 
-        Task<T> GetByIdToCommandAsync(Guid? id, List<Expression<Func<T, object>>> includes = null);
+        Task<T> GetByIdToCommandAsync(Guid? id, List<Expression<Func<T, object>>>? includes = null);
 
 
         void AddEntity(T entity);

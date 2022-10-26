@@ -24,7 +24,7 @@ namespace BancoSolidario.Common.CommonExtendEntity
         public bool? ShowToUserMed { get; set; }
 
         [NotMapped]
-        public InfoResponseVm Response { get; set; }
+        public InfoResponseVm? Response { get; set; }
 
     }
 }

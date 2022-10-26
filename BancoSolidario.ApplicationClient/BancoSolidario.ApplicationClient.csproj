@@ -12,12 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\Persistence\" />
     <Folder Include="Mappings\" />
-    <Folder Include="Features\" />
     <Folder Include="Helpers\" />
     <Folder Include="Notifications\" />
-    <Folder Include="Specifications\" />
   </ItemGroup>
 
 </Project>
