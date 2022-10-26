@@ -41,17 +41,17 @@ namespace BancoSolidario.InfrastructurePlanAhorro.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "Spanish_Spain.1252");
+            //modelBuilder.HasAnnotation("Relational:Collation", "Spanish_Spain.1252");
 
             // ESTO ES FLUENT APIs
             modelBuilder.Entity<NuevoPlanAhorro.Entities.TiempoPlanDeAhorro>(entity =>
             {
-                entity.Property(e => e.Id).HasDefaultValueSql("(md5(((random())::text || (clock_timestamp())::text)))");
+                //entity.Property(e => e.Id).HasDefaultValueSql("(md5(((random())::text || (clock_timestamp())::text)))");
             });
 
             modelBuilder.Entity<NuevoPlanAhorro.Entities.PlanAhorro>(entity =>
             {
-                entity.Property(e => e.Id).HasDefaultValueSql("(md5(((random())::text || (clock_timestamp())::text)))");
+                //entity.Property(e => e.Id).HasDefaultValueSql("(md5(((random())::text || (clock_timestamp())::text)))");
 
                 entity.HasOne(d => d.TiempoPlanDeAhorro)
                         .WithMany(p => p.PlanesDeAhorro)
@@ -63,3 +63,7 @@ namespace BancoSolidario.InfrastructurePlanAhorro.Persistence
 
     }
 }
+/**
+ *  Crear una migracion: add-migration AlgunNombre -context NuevoPlanAhorroContext
+ *  Actualizar entidades en la base de datos: Update-Database -context NuevoPlanAhorroContext
+ */

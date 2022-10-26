@@ -31,6 +31,7 @@ namespace BancoSolidario.ApplicationPlanAhorro.Features.PlanAhorro.Commands.Crea
         {
 
             var entity = _mapper.Map<NuevoPlanAhorro.Entities.PlanAhorro>(request);
+            entity.Id = Guid.NewGuid().ToString();
             List<string>? responseMessage = new List<string>();
 
             _unitOfWork.Repository<NuevoPlanAhorro.Entities.PlanAhorro>().AddEntity(entity);

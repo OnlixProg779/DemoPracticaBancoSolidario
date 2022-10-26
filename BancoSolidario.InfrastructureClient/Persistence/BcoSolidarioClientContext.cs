@@ -39,16 +39,20 @@ namespace BancoSolidario.InfrastructureClient.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "Spanish_Spain.1252");
+            //modelBuilder.HasAnnotation("Relational:Collation", "Spanish_Spain.1252");
 
             // ESTO ES FLUENT APIs
 
             modelBuilder.Entity<BancoSolidario.Client.Entities.Client>(entity =>
             {
-                entity.Property(e => e.Id).HasDefaultValueSql("(md5(((random())::text || (clock_timestamp())::text)))");
+                //entity.Property(e => e.Id).HasDefaultValueSql("(md5(((random())::text || (clock_timestamp())::text)))");
             });
 
         }
 
     }
 }
+/**
+ *  Crear una migracion: add-migration AlgunNombre -context BcoSolidarioClientContext
+ *  Actualizar entidades en la base de datos: Update-Database -context BcoSolidarioClientContext
+ */

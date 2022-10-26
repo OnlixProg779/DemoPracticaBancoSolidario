@@ -32,3 +32,8 @@ Implementacion de servicios. Ok *****
 Implementacion de contratos. Ok *****
 Patrones de diseño. Ok ****
 Servicio para Cache header Ok *****
+
+
+Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+Data Source=localhost\\sqlexpress;Initial Catalog=bncoclientes;Integrated Security=True;
+Data Source=localhost\\sqlexpress;Initial Catalog=bncocahorro;Integrated Security=True;

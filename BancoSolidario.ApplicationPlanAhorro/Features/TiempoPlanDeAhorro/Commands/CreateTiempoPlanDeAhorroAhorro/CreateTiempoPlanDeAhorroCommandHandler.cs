@@ -31,6 +31,8 @@ namespace BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Comma
         {
 
             var entity = _mapper.Map<NuevoPlanAhorro.Entities.TiempoPlanDeAhorro>(request);
+            entity.Id = Guid.NewGuid().ToString();
+
             List<string>? responseMessage = new List<string>();
 
             _unitOfWork.Repository<NuevoPlanAhorro.Entities.TiempoPlanDeAhorro>().AddEntity(entity);

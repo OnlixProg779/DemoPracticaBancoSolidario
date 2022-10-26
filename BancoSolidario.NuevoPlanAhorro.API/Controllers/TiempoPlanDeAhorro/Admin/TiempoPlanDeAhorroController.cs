@@ -1,5 +1,4 @@
-﻿
-using BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Commands.ChangeActivators;
+﻿using BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Commands.ChangeActivators;
 using BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Commands.CreateTiempoPlanDeAhorroAhorro;
 using BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Queries.GetById;
 using BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Queries.GetTiempoPlanDeAhorroPaginParams;

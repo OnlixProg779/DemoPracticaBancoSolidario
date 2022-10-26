@@ -18,7 +18,10 @@ namespace BancoSolidario.InfrastructurePlanAhorro
 
             services.AddDbContext<NuevoPlanAhorroContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("ConnectionStringSqlServer"));
+                options.UseSqlServer(
+                    configuration.GetConnectionString("ConnectionStringSqlServer"),
+                    x => x.MigrationsAssembly("BancoSolidario.InfrastructurePlanAhorro")
+                    );
             });
 
             services.AddScoped(typeof(IUnitOfWorkAppPlanDeAhorro), typeof(UnitOfWorkAppPlanDeAhorro));

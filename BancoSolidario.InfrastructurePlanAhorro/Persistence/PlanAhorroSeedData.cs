@@ -13,6 +13,7 @@ namespace BancoSolidario.InfrastructurePlanAhorro.Persistence
 
                 var entity = new TiempoPlanDeAhorro()
                 {
+                    Id = Guid.NewGuid().ToString(),
                     Meses = 12,
                     TasaDeInteresAnual = 3,
                     TipoDeInteres = "NOMINAL",

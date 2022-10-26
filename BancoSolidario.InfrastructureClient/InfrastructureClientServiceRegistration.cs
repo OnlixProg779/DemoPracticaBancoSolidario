@@ -17,15 +17,14 @@ namespace BancoSolidario.InfrastructureClient
 
             services.AddDbContext<BcoSolidarioClientContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("ConnectionStringSqlServer"));
+                options.UseSqlServer(configuration.GetConnectionString("ConnectionStringSqlServer"),
+                    x => x.MigrationsAssembly("BancoSolidario.InfrastructureClient"));
             });
 
             services.AddScoped(typeof(IUnitOfWorkAppClient), typeof(UnitOfWorkAppClient));
 
 
-
             services.AddScoped(typeof(IClientRepository), typeof(ClientRepository));
-
 
 
             services.AddHttpContextAccessor();

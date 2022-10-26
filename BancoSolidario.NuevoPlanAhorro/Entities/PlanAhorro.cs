@@ -17,7 +17,7 @@ namespace BancoSolidario.NuevoPlanAhorro.Entities
         public string TiempoPlanDeAhorroId { get; set; } = null!;
 
         [ForeignKey(nameof(TiempoPlanDeAhorroId))]
-        [InverseProperty("Clients")]
+        [InverseProperty("PlanesDeAhorro")]
         public virtual TiempoPlanDeAhorro? TiempoPlanDeAhorro { get; set; }
     }
 }
