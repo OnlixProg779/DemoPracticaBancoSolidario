@@ -11,4 +11,12 @@
     <ProjectReference Include="..\BancoSolidario.NuevoPlanAhorro\BancoSolidario.NuevoPlanAhorro.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Notifications\" />
+    <Folder Include="Specifications\" />
+  </ItemGroup>
+
 </Project>
