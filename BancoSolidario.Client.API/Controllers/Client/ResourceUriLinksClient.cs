@@ -13,7 +13,6 @@ namespace BancoSolidario.Client.API.Controllers.Client
         public ResourceUriLinksClient()
         {
   
-
         }
 
         [HttpOptions]

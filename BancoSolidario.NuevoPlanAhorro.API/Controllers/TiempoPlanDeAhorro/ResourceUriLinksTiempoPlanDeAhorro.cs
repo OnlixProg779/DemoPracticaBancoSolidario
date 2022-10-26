@@ -66,7 +66,7 @@ namespace BancoSolidario.NuevoPlanAhorro.API.Controllers.TiempoPlanDeAhorro
             switch (type)
             {
                 case ResourceUriType.PreviousPage:
-                    return Url.Link("GetClients",
+                    return Url.Link("GetListaTiempoPlanDeAhorro",
                         new
                         {
                             searchQuery = tiempoPlanDeAhorroResourceParameters.SearchQuery,
@@ -90,7 +90,7 @@ namespace BancoSolidario.NuevoPlanAhorro.API.Controllers.TiempoPlanDeAhorro
                             meses = tiempoPlanDeAhorroResourceParameters.TiempoPlanDeAhorroPaginParams.Meses,
                         });
                 case ResourceUriType.NextPage:
-                    return Url.Link("GetClients",
+                    return Url.Link("GetListaTiempoPlanDeAhorro",
                         new
                         {
                             searchQuery = tiempoPlanDeAhorroResourceParameters.SearchQuery,
@@ -115,7 +115,7 @@ namespace BancoSolidario.NuevoPlanAhorro.API.Controllers.TiempoPlanDeAhorro
                         });
                 case ResourceUriType.Current:
                 default:
-                    return Url.Link("GetClients",
+                    return Url.Link("GetListaTiempoPlanDeAhorro",
                         new
                         {
                             searchQuery = tiempoPlanDeAhorroResourceParameters.SearchQuery,
@@ -171,7 +171,7 @@ namespace BancoSolidario.NuevoPlanAhorro.API.Controllers.TiempoPlanDeAhorro
 
             //}
 
-            return CreatedAtRoute("GetClient", new
+            return CreatedAtRoute("GetTiempoPlanDeAhorro", new
             {
                 Id = linkedResourceToReturn["Id"]
             }, linkedResourceToReturn);
