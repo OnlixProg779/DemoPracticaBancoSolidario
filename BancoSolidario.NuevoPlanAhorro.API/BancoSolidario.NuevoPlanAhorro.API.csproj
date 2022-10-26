@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="Controllers\PlanAhorro\" />
+    <Folder Include="Controllers\TiempoPlanDeAhorro\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -20,7 +20,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api_Demo_BcoSolidario", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api_Demo_BcoSolidario_Client", Version = "v1" });
 });
 
 builder.Services.AddExtendInfrastructureServices(builder.Configuration);
@@ -29,13 +29,13 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddExtendApplicationServices();
 builder.Services.AddApplicationServices();
 
-builder.Services.AddCors(options => // service cors
+builder.Services.AddCors(options => 
 {
     options.AddPolicy("CorsPolicy", builder => builder
-     .AllowAnyOrigin() // con el cliente se puede acceder a las apis
+     .AllowAnyOrigin() 
      .AllowAnyMethod()
      .AllowAnyHeader()
-     //.WithExposedHeaders(new string[] { "X-Pagination", "ETag" })
+     .WithExposedHeaders(new string[] { "X-Pagination", "ETag" })
     );
 });
 
@@ -102,7 +102,7 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 
     app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api_Demo_BcoSolidario v1"));
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api_Demo_BcoSolidario_Client v1"));
 }
 else
 {
@@ -147,7 +147,7 @@ using (var scope = app.Services.CreateScope())
         var context = service.GetRequiredService<BcoSolidarioClientContext>();
         await context.Database.MigrateAsync();
 
-        await PlanAhorroSeedData.SeedAsync(context, loggerFactory);
+        await ClientSeedData.SeedAsync(context, loggerFactory);
 
     }
     catch (Exception ex)

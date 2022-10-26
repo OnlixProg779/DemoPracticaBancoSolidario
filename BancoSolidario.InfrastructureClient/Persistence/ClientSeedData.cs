@@ -2,18 +2,18 @@
 
 namespace BancoSolidario.InfrastructureClient.Persistence
 {
-    public class PlanAhorroSeedData
+    public class ClientSeedData
     {
         public static async Task SeedAsync(BcoSolidarioClientContext _context, ILoggerFactory loggerFactory)
         {
             if (!_context.Clients!.Any())
             {
-                var logger = loggerFactory.CreateLogger<PlanAhorroSeedData>();
+                var logger = loggerFactory.CreateLogger<ClientSeedData>();
 
                 var entity = new BancoSolidario.Client.Entities.Client()
                 {
-                    Nombre = "",
-                    Cedula = ""
+                    Nombre = "Roberto Carlos",
+                    Cedula = "1104503344"
                 };
 
                _context.Clients!.Add(entity);
