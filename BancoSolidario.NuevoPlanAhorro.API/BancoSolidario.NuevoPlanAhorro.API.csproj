@@ -12,11 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\PlanAhorro\" />
-    <Folder Include="Controllers\TiempoPlanDeAhorro\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BancoSolidario.ApplicationPlanAhorro\BancoSolidario.ApplicationPlanAhorro.csproj" />
     <ProjectReference Include="..\BancoSolidario.InfrastructurePlanAhorro\BancoSolidario.InfrastructurePlanAhorro.csproj" />
   </ItemGroup>
