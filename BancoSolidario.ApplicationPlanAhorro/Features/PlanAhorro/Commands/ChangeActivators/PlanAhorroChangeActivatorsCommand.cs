@@ -6,10 +6,10 @@ namespace BancoSolidario.ApplicationPlanAhorro.Features.PlanAhorro.Commands.Chan
 {
     public class PlanAhorroChangeActivatorsCommand : ExtendChangeActivatorsCommand, IRequest<ResponseChangeActivators>
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
 
-        public PlanAhorroChangeActivatorsCommand(Guid id)
+        public PlanAhorroChangeActivatorsCommand(string id)
         {
             Id = id;
         }

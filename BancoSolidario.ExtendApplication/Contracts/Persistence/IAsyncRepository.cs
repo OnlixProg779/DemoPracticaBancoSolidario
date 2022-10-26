@@ -14,18 +14,18 @@ namespace BancoSolidario.ExtendApplication.Contracts.Persistence
 
         Task<ResponseChangeActivators> ChangeEditable(T entity, bool? command);
 
-        Task<T> GetByIdToCommandAsync(Guid? id, List<Expression<Func<T, object>>>? includes = null);
+        Task<T> GetByIdToCommandAsync(string? id, List<Expression<Func<T, object>>>? includes = null);
 
 
         void AddEntity(T entity);
-        void AddRangeEntity(IEnumerable<T> entities);
+        //void AddRangeEntity(IEnumerable<T> entities);
 
         void UpdateEntity(T entity);
-        void DeleteEntity(T entity);
+        //void DeleteEntity(T entity);
 
-        Task<T> GetFirstWithSpec(ISpecification<T> spec, bool disableTracking = true);
-        Task<T> GetByIdWithSpec(Guid? id, ISpecification<T> spec, bool disableTracking = true);
-        Task<IEnumerable<T>> GetByIdsWithSpec(IEnumerable<Guid> ids, ISpecification<T> spec, bool disableTracking = true);
+        //Task<T> GetFirstWithSpec(ISpecification<T> spec, bool disableTracking = true);
+        Task<T> GetByIdWithSpec(string? id, ISpecification<T> spec, bool disableTracking = true);
+        //Task<IEnumerable<T>> GetByIdsWithSpec(IEnumerable<Guid> ids, ISpecification<T> spec, bool disableTracking = true);
         Task<List<T>> GetAllWithSpec(ISpecification<T> spec, bool disableTracking = true);
         Task<int> CountAsync(ISpecification<T> spec);
 

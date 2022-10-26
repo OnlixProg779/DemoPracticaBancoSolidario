@@ -7,9 +7,9 @@ namespace BancoSolidario.ApplicationClient.Features.Client.Queries.GetById
     public class GetClientByIdQuery
     : ExtendGetQuery, IRequest<ClientVm>
     {
-        public Guid? Id { get; set; }
+        public string? Id { get; set; }
 
-        public GetClientByIdQuery(Guid? id)
+        public GetClientByIdQuery(string? id)
         {
             Id = id ?? throw new ArgumentNullException(nameof(id));
         }

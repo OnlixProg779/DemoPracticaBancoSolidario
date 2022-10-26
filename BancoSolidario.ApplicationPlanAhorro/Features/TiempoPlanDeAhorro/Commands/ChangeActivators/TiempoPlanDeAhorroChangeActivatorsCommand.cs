@@ -6,10 +6,10 @@ namespace BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Comma
 {
     public class TiempoPlanDeAhorroChangeActivatorsCommand : ExtendChangeActivatorsCommand, IRequest<ResponseChangeActivators>
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
 
-        public TiempoPlanDeAhorroChangeActivatorsCommand(Guid id)
+        public TiempoPlanDeAhorroChangeActivatorsCommand(string id)
         {
             Id = id;
         }
