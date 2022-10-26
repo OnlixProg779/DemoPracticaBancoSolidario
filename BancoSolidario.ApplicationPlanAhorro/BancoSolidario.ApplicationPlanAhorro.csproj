@@ -12,12 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\PlanAhorro\Queries\GetPlanAhorroPaginParams\" />
-    <Folder Include="Features\TiempoPlanDeAhorro\Queries\GetTiempoPlanDeAhorroPaginParams\" />
     <Folder Include="Helpers\" />
     <Folder Include="Mappings\" />
     <Folder Include="Notifications\" />
-    <Folder Include="Specifications\" />
   </ItemGroup>
 
 </Project>
