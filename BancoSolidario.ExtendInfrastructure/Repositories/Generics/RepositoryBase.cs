@@ -19,7 +19,7 @@ namespace BancoSolidario.ExtendInfrastructure.Repositories.Generics
            throw new ArgumentNullException(nameof(context));
         }
        
-        public async Task<T> GetByIdToCommandAsync(string? id, List<Expression<Func<T, object>>> includes = null)
+        public async Task<T> GetByIdToCommandAsync(string? id, List<Expression<Func<T, object>>>? includes = null)
         {
             IQueryable<T>? query = null;
 
