@@ -5,6 +5,8 @@ using BancoSolidario.InfrastructurePlanAhorro;
 using BancoSolidario.InfrastructurePlanAhorro.Persistence;
 using BancoSolidario.NuevoPlanAhorro.API.Helpers;
 using BancoSolidario.NuevoPlanAhorro.API.Middleware;
+using BancoSolidario.NuevoPlanAhorro.API.RemoteContracts;
+using BancoSolidario.NuevoPlanAhorro.API.RemoteServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +35,7 @@ builder.Services.AddHttpClient("ClienteBancoSolidario", config =>
 {
     config.BaseAddress = new Uri(builder.Configuration["Services:ClienteBancoSolidario"]);
 });
+builder.Services.AddScoped(typeof(IClientServices), typeof(ClientServices));
 
 builder.Services.AddCors(options =>
 {

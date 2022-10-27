@@ -1,5 +1,5 @@
-﻿using BancoSolidario.NuevoPlanAhorro.API.RemoteContracts;
-using BancoSolidario.NuevoPlanAhorro.API.RemotModel;
+﻿using BancoSolidario.ApplicationPlanAhorro.RemotModel;
+using BancoSolidario.NuevoPlanAhorro.API.RemoteContracts;
 using System.Text.Json;
 
 namespace BancoSolidario.NuevoPlanAhorro.API.RemoteServices
@@ -17,7 +17,7 @@ namespace BancoSolidario.NuevoPlanAhorro.API.RemoteServices
            throw new ArgumentNullException(nameof(logger));
         }
 
-        public async Task<(bool resultado, ClientRemote, string ErrorMessage)> GetClient(string id)
+        public async Task<(bool resultado, ClientRemote client, string ErrorMessage)> GetClient(string id)
         {
             try
             {

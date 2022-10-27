@@ -6,6 +6,7 @@ using BancoSolidario.ApplicationPlanAhorro.Features.PlanAhorro.Queries.Vms;
 using BancoSolidario.ExtendApplication.Features.Shared.Commands;
 using BancoSolidario.ExtendApplication.Features.Shared.Queries;
 using BancoSolidario.NuevoPlanAhorro.API.Helpers;
+using BancoSolidario.NuevoPlanAhorro.API.RemoteContracts;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
@@ -18,10 +19,14 @@ namespace BancoSolidario.NuevoPlanAhorro.API.Controllers.PlanAhorro.Admin
     [Route("api/0v1/[controller]")]
     public class PlanAhorroController : ResourceUriLinksPlanAhorro
     {
-        private readonly IMediator _mediator; 
+        private readonly IMediator _mediator;
+        private readonly IClientServices _clientServices;
 
-        public PlanAhorroController(IMediator mediator) :base()
+        public PlanAhorroController(IMediator mediator,
+            IClientServices clientServices) :base()
         {
+            _clientServices = clientServices ??
+                throw new ArgumentNullException(nameof(clientServices));
             _mediator = mediator ??
                 throw new ArgumentNullException(nameof(mediator));
         }
@@ -93,6 +98,15 @@ namespace BancoSolidario.NuevoPlanAhorro.API.Controllers.PlanAhorro.Admin
             }
 
             var paginationResponse = await _mediator.Send(entityWParams);
+
+            foreach (var item in paginationResponse)
+            {
+                var response = await _clientServices.GetClient(item.ClientRef);
+                if (response.resultado)
+                {
+                    item.ClientRemote = response.client;
+                }
+            }
 
             var paginationMetadata = new
             {

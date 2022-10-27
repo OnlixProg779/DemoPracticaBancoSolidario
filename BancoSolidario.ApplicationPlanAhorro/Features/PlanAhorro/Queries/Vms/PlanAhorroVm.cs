@@ -1,5 +1,6 @@
 ﻿
 using BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Queries.Vms;
+using BancoSolidario.ApplicationPlanAhorro.RemotModel;
 using BancoSolidario.Common.CommonExtendEntity;
 
 namespace BancoSolidario.ApplicationPlanAhorro.Features.PlanAhorro.Queries.Vms
@@ -11,6 +12,7 @@ namespace BancoSolidario.ApplicationPlanAhorro.Features.PlanAhorro.Queries.Vms
         public string? TiempoPlanDeAhorroId { get; set; }
 
         public virtual TiempoPlanDeAhorroVm? TiempoPlanDeAhorro { get; set; }
+        public virtual ClientRemote? ClientRemote { get; set; }
 
     }
 }

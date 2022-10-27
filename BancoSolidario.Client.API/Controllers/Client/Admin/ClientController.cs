@@ -50,28 +50,28 @@ namespace BancoSolidario.Client.API.Controllers.Client.Admin
         }
 
 
-        [Produces( // Accept
-       "application/vnd.bncoSolidario.client.full+json",
-       "application/vnd.bncoSolidario.client.full+xml"
-       )] 
+       // [Produces( // Accept
+       //"application/vnd.bncoSolidario.client.full+json",
+       //"application/vnd.bncoSolidario.client.full+xml"
+       //)] 
         [ProducesResponseType(typeof(ClientVm), (int)HttpStatusCode.OK)]
         [HttpGet("{id}", Name = "GetClient")]
         public async Task<ActionResult<ClientVm>> GetClient(
-            string id,
-           [FromHeader(Name = "Accept")] string mediaType)
+            string id
+           )
         {
-            if (!MediaTypeHeaderValue.TryParse(mediaType,
-                out MediaTypeHeaderValue parsedMediaType))
-            { 
-                return BadRequest();
-            }
+            //if (!MediaTypeHeaderValue.TryParse(mediaType,
+            //    out MediaTypeHeaderValue parsedMediaType))
+            //{ 
+            //    return BadRequest();
+            //}
 
             var query = new GetClientByIdQuery(id);
             var VMresponse = await _mediator.Send(query);
 
 
 
-            return SendResponse(parsedMediaType, VMresponse);
+            return SendResponse(null, VMresponse);
 
         }
 

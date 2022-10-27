@@ -5,17 +5,17 @@ Microservicio Clientes:
 Entidad clientes:
 	- Crear Operacion de consultar uno y varios. OK. **********
 	- Ingresar varios registros automaticamente desde una clase seedData directo a la persistencia. Ok. ******
-	- Validar q la cedula tenga 10 digitos y los campos de cliente no puedan estar vacios
+	- Validar q la cedula tenga 10 digitos y los campos de cliente no puedan estar vacios ok ***********
 
 Microservicio Nuevo Plan De Ahorro
 (Contiene 2 entidades <PlanAhorro> <TiempoPlanDeAhorro> con relacion de uno a muchos) OK.***********
 Entidad Nuevo Plan de ahorro
 Condiciones: 
-	- Minimo para aperturar: $100
-	- Se paga un interes nominal del 3% anual
+	- Minimo para aperturar: $100 OK *********
+	- Se paga un interes nominal del 3% anual Ok **********
 	- Implementar Create OK.***********
 	- Crear Operacion de consultar uno y varios. OK.**************
-	- Implementar Consulta (proyeccion a un año con el interes indicado <Presentar la cuenta mensual a 1 año>)
+	- Implementar Consulta (proyeccion a un año con el interes indicado <Presentar la cuenta mensual a 1 año>) Ok *******
 
 Entidad Tiempo plan de ahorro (Para cumplir con principios SOLID) OK ********
 	- Autorellenada con un seedData Ok.***********

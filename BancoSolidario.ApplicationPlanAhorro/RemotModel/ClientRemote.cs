@@ -1,6 +1,6 @@
 ﻿using BancoSolidario.Common.CommonExtendEntity;
 
-namespace BancoSolidario.NuevoPlanAhorro.API.RemotModel
+namespace BancoSolidario.ApplicationPlanAhorro.RemotModel
 {
     public class ClientRemote: BaseDomainModel
     {
