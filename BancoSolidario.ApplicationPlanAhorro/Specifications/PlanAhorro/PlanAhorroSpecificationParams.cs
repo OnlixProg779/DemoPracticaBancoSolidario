@@ -32,17 +32,17 @@ namespace BancoSolidario.ApplicationPlanAhorro.Specifications.PlanAhorro
             }
             if(!string.IsNullOrEmpty(_planAhorroPaginParams.ClientRef))
             {
-                listCriteria.Add(x => x.ClientRef == _planAhorroPaginParams.ClientRef);
+                listCriteria.Add(x => x.ClientRef.ToLower().Trim().Contains(_planAhorroPaginParams.ClientRef));
 
             }
             if (!string.IsNullOrEmpty(_planAhorroPaginParams.MontoDeAhorro))
             {
-                listCriteria.Add(x => x.MontoDeAhorro == _planAhorroPaginParams.MontoDeAhorro);
+                listCriteria.Add(x => x.MontoDeAhorro.ToLower().Trim().Contains(_planAhorroPaginParams.MontoDeAhorro));
             }
 
             if (!string.IsNullOrEmpty(_planAhorroPaginParams.TiempoPlanDeAhorroId))
             {
-                listCriteria.Add(x => x.TiempoPlanDeAhorroId == _planAhorroPaginParams.TiempoPlanDeAhorroId);
+                listCriteria.Add(x => x.TiempoPlanDeAhorroId.ToLower().Trim().Contains(_planAhorroPaginParams.TiempoPlanDeAhorroId));
             }
 
             return listCriteria;

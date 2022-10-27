@@ -34,12 +34,12 @@ namespace BancoSolidario.ApplicationClient.Specifications.Client
             }
             if(!string.IsNullOrEmpty(_clientPaginParams.Nombre))
             {
-                listCriteria.Add(x => x.Nombre == _clientPaginParams.Nombre);
+                listCriteria.Add(x => x.Nombre.ToLower().Trim().Contains(_clientPaginParams.Nombre));
 
             }
             if (!string.IsNullOrEmpty(_clientPaginParams.Cedula))
             {
-                listCriteria.Add(x => x.Cedula == _clientPaginParams.Cedula);
+                listCriteria.Add(x => x.Cedula.ToLower().Trim().Contains(_clientPaginParams.Cedula));
             }
 
             return listCriteria;

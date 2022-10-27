@@ -42,7 +42,7 @@ namespace BancoSolidario.ApplicationPlanAhorro.Specifications.TiempoPlanDeAhorro
 
             if (!string.IsNullOrEmpty(_tiempoPlanDeAhorroPaginParams.TipoDeInteres))
             {
-                listCriteria.Add(x => x.TipoDeInteres == _tiempoPlanDeAhorroPaginParams.TipoDeInteres);
+                listCriteria.Add(x => x.TipoDeInteres.ToLower().Trim().Contains(_tiempoPlanDeAhorroPaginParams.TipoDeInteres));
             }
 
             return listCriteria;
