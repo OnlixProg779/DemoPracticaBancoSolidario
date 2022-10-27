@@ -4,6 +4,7 @@ using BancoSolidario.InfrastructurePlanAhorro.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BancoSolidario.InfrastructurePlanAhorro.Migrations
 {
     [DbContext(typeof(NuevoPlanAhorroContext))]
-    partial class NuevoPlanAhorroContextModelSnapshot : ModelSnapshot
+    [Migration("20221027065426_correccionDeCampo")]
+    partial class correccionDeCampo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

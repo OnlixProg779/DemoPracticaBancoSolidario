@@ -13,7 +13,7 @@ namespace BancoSolidario.NuevoPlanAhorro.Entities
         }
 
         public string ClientRef { get; set; } = null!;
-        public string MontoDeAhorro { get; set; } = null!;
+        public float MontoDeAhorro { get; set; } 
         public string TiempoPlanDeAhorroId { get; set; } = null!;
 
         [ForeignKey(nameof(TiempoPlanDeAhorroId))]

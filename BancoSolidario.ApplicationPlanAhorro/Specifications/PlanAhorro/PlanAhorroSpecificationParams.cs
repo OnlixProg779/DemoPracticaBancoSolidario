@@ -35,9 +35,9 @@ namespace BancoSolidario.ApplicationPlanAhorro.Specifications.PlanAhorro
                 listCriteria.Add(x => x.ClientRef.ToLower().Trim().Contains(_planAhorroPaginParams.ClientRef));
 
             }
-            if (!string.IsNullOrEmpty(_planAhorroPaginParams.MontoDeAhorro))
+            if (_planAhorroPaginParams.MontoDeAhorro != null)
             {
-                listCriteria.Add(x => x.MontoDeAhorro.ToLower().Trim().Contains(_planAhorroPaginParams.MontoDeAhorro));
+                listCriteria.Add(x => x.MontoDeAhorro == _planAhorroPaginParams.MontoDeAhorro);
             }
 
             if (!string.IsNullOrEmpty(_planAhorroPaginParams.TiempoPlanDeAhorroId))

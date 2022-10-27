@@ -8,7 +8,7 @@ namespace BancoSolidario.ApplicationPlanAhorro.Features.PlanAhorro.Commands.Crea
     {
 
         public string? ClientRef { get; set; }
-        public string? MontoDeAhorro { get; set; }
+        public float? MontoDeAhorro { get; set; }
         public string? TiempoPlanDeAhorroId { get; set; } 
 
     }

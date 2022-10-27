@@ -17,7 +17,7 @@ namespace BancoSolidario.ApplicationPlanAhorro.Features.PlanAhorro.Queries.GetPl
     public class PlanAhorroPaginParams : StandarBaseQuery
     {
         public string? ClientRef { get; set; }
-        public string? MontoDeAhorro { get; set; }
+        public float? MontoDeAhorro { get; set; }
         public string? TiempoPlanDeAhorroId { get; set; }
 
     }
