@@ -29,6 +29,11 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddExtendApplicationServices();
 builder.Services.AddApplicationServices();
 
+builder.Services.AddHttpClient("ClienteBancoSolidario", config =>
+{
+    config.BaseAddress = new Uri(builder.Configuration["Services:ClienteBancoSolidario"]);
+});
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", builder => builder

@@ -29,6 +29,8 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddExtendApplicationServices();
 builder.Services.AddApplicationServices();
 
+//builder.Services.AddHttpClient();
+
 builder.Services.AddCors(options => 
 {
     options.AddPolicy("CorsPolicy", builder => builder

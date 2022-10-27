@@ -45,7 +45,6 @@ namespace BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Queri
             var totalAgencies = await _unitOfWork.Repository<NuevoPlanAhorro.Entities.TiempoPlanDeAhorro>().CountAsync(specCount);
 
             var spec = new TiempoPlanDeAhorroSpecification(entitySpecificationParams, criteria);
-
             var agencies = await _unitOfWork.Repository<NuevoPlanAhorro.Entities.TiempoPlanDeAhorro>().GetAllWithSpec(spec);
 
             var data = _mapper.Map<List<NuevoPlanAhorro.Entities.TiempoPlanDeAhorro>, List<TiempoPlanDeAhorroVm>>(agencies);

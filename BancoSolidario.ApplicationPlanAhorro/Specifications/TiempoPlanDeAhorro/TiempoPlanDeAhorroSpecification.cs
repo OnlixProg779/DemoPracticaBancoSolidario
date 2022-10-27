@@ -13,10 +13,8 @@ namespace BancoSolidario.ApplicationPlanAhorro.Specifications.TiempoPlanDeAhorro
         {
             // aqui se agrega el include
 
-            //AddInclude(a => a.Algo);
-
             // aqui de agrega el paginador
-            ApplyPaging(entityParams.PageSize * (entityParams.PageIndex - 1), entityParams.PageSize);
+            ApplyPaging(entityParams.PageSize * (entityParams.PageIndex - 1), entityParams.PageSize,false);
 
 
             // aqui se incluyen los metodos de ordenamiento
