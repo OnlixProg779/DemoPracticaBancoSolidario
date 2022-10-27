@@ -7,6 +7,7 @@ namespace BancoSolidario.InfrastructurePlanAhorro.Persistence
     {
         public static async Task SeedAsync(NuevoPlanAhorroContext _context, ILoggerFactory loggerFactory)
         {
+
             if (!_context.TiemposParaPlanDeAhorro!.Any())
             {
                 var logger = loggerFactory.CreateLogger<PlanAhorroSeedData>();
@@ -22,9 +23,9 @@ namespace BancoSolidario.InfrastructurePlanAhorro.Persistence
                _context.TiemposParaPlanDeAhorro!.Add(entity);
 
 
-                await _context.SaveChangesAsync();
+               var respon =  await _context.SaveChangesAsync();
 
-                logger.LogInformation($"Insertando nuevos records a la entidad {nameof(TiempoPlanDeAhorro)}");
+                logger.LogInformation($"Insertando nuevos records ({respon}) a la entidad {nameof(TiempoPlanDeAhorro)}");
 
             }
          
