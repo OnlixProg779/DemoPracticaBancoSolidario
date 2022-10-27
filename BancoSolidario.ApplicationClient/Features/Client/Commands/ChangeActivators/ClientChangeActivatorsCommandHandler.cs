@@ -30,11 +30,12 @@ namespace BancoSolidario.ApplicationClient.Features.Client.Commands.ChangeActiva
 
                 if (respo.ResponseChange == 1)
                 {
-                    _logger.LogInformation("Change Editable se realizo correctamente");
+                    respo.ResponseMessage = "Change Active se realizo correctamente";
+                    _logger.LogInformation(respo.ResponseMessage);
                 }
                 else
                 {
-                    _logger.LogError("Change Editable No se realizo");
+                    _logger.LogError("Change Active No se realizo");
                 }
                 return respo;
 
@@ -45,11 +46,12 @@ namespace BancoSolidario.ApplicationClient.Features.Client.Commands.ChangeActiva
                 respo.ResponseChange = await _unitOfWork.Complete("Firma de usuario que ejecuta la peticion");
                 if (respo.ResponseChange == 1)
                 {
-                    _logger.LogInformation("Change Editable se realizo correctamente");
+                    respo.ResponseMessage = "Change Borrable se realizo correctamente";
+                    _logger.LogInformation(respo.ResponseMessage);
                 }
                 else
                 {
-                    _logger.LogError("Change Editable No se realizo");
+                    _logger.LogError("Change Borrable No se realizo");
                 }
                 return respo;
 
@@ -60,7 +62,8 @@ namespace BancoSolidario.ApplicationClient.Features.Client.Commands.ChangeActiva
                 respo.ResponseChange = await _unitOfWork.Complete("Firma de usuario que ejecuta la peticion");
                 if (respo.ResponseChange == 1)
                 {
-                    _logger.LogInformation("Change Editable se realizo correctamente");
+                    respo.ResponseMessage = "Change Editable se realizo correctamente";
+                    _logger.LogInformation(respo.ResponseMessage);
                 }
                 else
                 {

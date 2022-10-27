@@ -139,10 +139,10 @@ namespace BancoSolidario.Client.API.Controllers.Client
         [NonAction]
         public ActionResult<ClientVm> SendResponse(MediaTypeHeaderValue parsedMediaType, ClientVm VMresponse)
         {
-            if(VMresponse.Response.ResponseAction == 0)
-            {
-                return NoContent();
-            }
+            //if(VMresponse.Response.ResponseAction == 0)
+            //{
+            //    return NoContent();
+            //}
             //string fields = new CustomAgencyFields().ChoseField(VMresponse.Response.Roles);
 
            // if (!_propertyCheckerService.TypeHasProperties<ClientVm>

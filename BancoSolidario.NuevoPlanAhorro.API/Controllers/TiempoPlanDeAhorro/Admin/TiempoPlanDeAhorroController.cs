@@ -116,9 +116,9 @@ namespace BancoSolidario.NuevoPlanAhorro.API.Controllers.TiempoPlanDeAhorro.Admi
         [HttpPut("{id}/activator", Name = "ChangeActivatorTiempoPlanAhorro")]
         [HttpHead("{id}/activator")]
         [Consumes(//Content-Type
-         "application/vnd.bncoSolidario.ChangeActivator.hateoas+json",
          "application/vnd.bncoSolidario.ChangeActivator+json")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
         public async Task<ActionResult<ResponseChangeActivators>> ChangeActivatorTiempoPlanAhorro(string id, [FromBody] string action,

@@ -30,7 +30,6 @@ namespace BancoSolidario.ApplicationClient.Features.Client.Queries.GetById
         public async Task<ClientVm> Handle(GetClientByIdQuery request, CancellationToken cancellationToken)
         {
      
-
             var specParams = new SpecificationParams(); 
             StandarBaseQuery baseQuery = new StandarBaseQuery();
 
@@ -44,7 +43,7 @@ namespace BancoSolidario.ApplicationClient.Features.Client.Queries.GetById
 
             vmToReturn.Response = new InfoResponseVm()
             {
-
+                
             };
             return vmToReturn;
         }

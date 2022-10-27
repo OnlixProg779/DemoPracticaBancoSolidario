@@ -143,10 +143,10 @@ namespace BancoSolidario.NuevoPlanAhorro.API.Controllers.PlanAhorro
         [NonAction]
         public ActionResult<PlanAhorroVm> SendResponse(MediaTypeHeaderValue parsedMediaType, PlanAhorroVm VMresponse)
         {
-            if(VMresponse.Response.ResponseAction == 0)
-            {
-                return NoContent();
-            }
+            //if(VMresponse.Response.ResponseAction == 0)
+            //{
+            //    return NoContent();
+            //}
             //string fields = new CustomAgencyFields().ChoseField(VMresponse.Response.Roles);
 
            // if (!_propertyCheckerService.TypeHasProperties<PlanAhorroVm>
