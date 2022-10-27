@@ -32,6 +32,19 @@ Implementacion de servicios. Ok *****
 Implementacion de contratos. Ok *****
 Patrones de diseño. Ok ****
 Servicio para Cache header Ok *****
+Code first Ok *****
+fuent api Ok *****
+migrations Ok *****
+patron repository Ok *****
+patron unit of work Ok *****
+patron CQRS con mediaTr Ok *****
+Mapper Ok *****
+Patron Specification Ok *****
+Fluent Validation Ok *****
+
+crear un metodo de API para obtener un plan de ahorro a 12 meses segun los valores del sistema.
+Cuando se crea un Plan ahorro, la llamada devuelve este metodo. 
+Cuando se aplasta el boton ver resumen tambien se llama al mismo metodo.
 
 
 Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;

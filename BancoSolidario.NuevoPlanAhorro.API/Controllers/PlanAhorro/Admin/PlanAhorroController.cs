@@ -32,7 +32,7 @@ namespace BancoSolidario.NuevoPlanAhorro.API.Controllers.PlanAhorro.Admin
           "application/vnd.bncoSolidario.CreatePlanAhorro+json")]
         [ProducesResponseType((int)HttpStatusCode.OK)]// Revisar este tipo de respuesta.
         public async Task<ActionResult<PlanAhorroVm>> CreatePlanAhorro(
-            [FromForm] CreatePlanAhorroCommand command,
+            [FromBody] CreatePlanAhorroCommand command,
             [FromHeader(Name = "Content-Type")] string mediaType
          )
         {

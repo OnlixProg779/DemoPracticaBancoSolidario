@@ -7,9 +7,9 @@ namespace BancoSolidario.ApplicationPlanAhorro.Features.TiempoPlanDeAhorro.Comma
     public class CreateTiempoPlanDeAhorroCommand: ExtendCreateCommand, IRequest<TiempoPlanDeAhorroVm>
     {
 
-        public string? ClientRef { get; set; }
-        public string? MontoDeAhorro { get; set; }
-        public string? TiempoPlanDeAhorroId { get; set; } 
+        public int? Meses { get; set; }
+        public float? TasaDeInteresAnual { get; set; }
+        public string? TipoDeInteres { get; set; }
 
     }
 }

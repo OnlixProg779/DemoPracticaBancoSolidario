@@ -32,7 +32,7 @@ namespace BancoSolidario.Client.API.Controllers.Client.Admin
         "application/vnd.bncoSolidario.CreateClient+json")]
         [ProducesResponseType((int)HttpStatusCode.OK)]// Revisar este tipo de respuesta.
         public async Task<ActionResult<ClientVm>> CreateClient(
-          [FromForm] CreateClientCommand command,
+          [FromBody] CreateClientCommand command,
           [FromHeader(Name = "Content-Type")] string mediaType
        )
         {
